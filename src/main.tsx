@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { StateProvider } from "./context/state-provider/StateProvider.tsx";
+import { StateProvider } from "./context/StateProvider.tsx";
 import "./index.css";
 import App from "./App.tsx";
 
