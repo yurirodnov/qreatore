@@ -7,15 +7,13 @@ import { useStateContext } from "../../context/StateProvider";
 import { Button } from "../button/Button";
 
 export const Main = () => {
-  const { qrGenerated, handleQrGeneration } = useStateContext();
+  const { isQrGenerated, handleQrGeneration } = useStateContext();
 
   return (
     <main>
       <InfoForm />
 
-      {qrGenerated ? <Qr /> : <NoQr />}
-
-      <Button title="Generate" onClick={handleQrGeneration} />
+      {isQrGenerated ? <Qr /> : <NoQr />}
     </main>
   );
 };

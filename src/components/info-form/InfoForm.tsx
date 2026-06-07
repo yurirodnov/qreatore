@@ -1,3 +1,11 @@
+import { useStateContext } from "../../context/StateProvider";
+
 export const InfoForm = () => {
-  return <div>User Input block</div>;
+  const { handleUserInput } = useStateContext();
+
+  return (
+    <form>
+      <input type="text" onChange={handleUserInput} />
+    </form>
+  );
 };
