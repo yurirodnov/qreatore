@@ -2,9 +2,14 @@ import styles from "./Button.module.css";
 
 interface ButtonProps {
   title: string;
+  disabled: boolean;
   onClick: () => void;
 }
 
-export const Button = ({ title, onClick }: ButtonProps) => {
-  return <button onClick={onClick}>{title}</button>;
+export const Button = ({ title, disabled, onClick }: ButtonProps) => {
+  return (
+    <button onClick={onClick} disabled={disabled}>
+      {title}
+    </button>
+  );
 };

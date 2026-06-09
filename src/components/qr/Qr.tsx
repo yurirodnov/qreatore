@@ -19,8 +19,8 @@ export const Qr = () => {
   return (
     <div className={styles.qrBlock}>
       {!isQrGenerated ? <NoQr /> : null}
-      <canvas ref={canvasRef} className={styles.canvas}></canvas>
-      <Button title="Generate" onClick={createQr} />
+      <canvas ref={canvasRef} width={1} height={1} className={styles.canvas}></canvas>
+      <Button title="Generate" disabled={!userInput} onClick={createQr} />
     </div>
   );
 };
