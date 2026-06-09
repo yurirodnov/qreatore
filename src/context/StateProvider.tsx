@@ -19,7 +19,7 @@ const StateContext = createContext<StateContextType | undefined>(undefined);
 
 export const StateProvider = ({ children }: StateProviderProps) => {
   const [userInput, setUserInput] = useState<string>("");
-  const [isQrGenerated, setQrGenerated] = useState<boolean>(true);
+  const [isQrGenerated, setQrGenerated] = useState<boolean>(false);
 
   const handleUserInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.currentTarget.value;
@@ -29,6 +29,7 @@ export const StateProvider = ({ children }: StateProviderProps) => {
 
   const handleQrGeneration = () => {
     setQrGenerated((prev) => !prev);
+    console.log("Is qr generated", isQrGenerated);
   };
 
   return (

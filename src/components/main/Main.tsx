@@ -2,18 +2,17 @@
 
 import { InfoForm } from "../info-form/InfoForm";
 import { Qr } from "../qr/Qr";
-import { NoQr } from "../no-qr/NoQr";
-import { useStateContext } from "../../context/StateProvider";
-import { Button } from "../button/Button";
+
+import styles from "./Main.module.css";
 
 export const Main = () => {
-  const { isQrGenerated, handleQrGeneration } = useStateContext();
-
   return (
-    <main>
-      <InfoForm />
+    <main className={styles.main}>
+      <div className={styles.wrapper}>
+        <InfoForm />
 
-      {isQrGenerated ? <Qr /> : <NoQr />}
+        <Qr />
+      </div>
     </main>
   );
 };
