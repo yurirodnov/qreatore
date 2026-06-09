@@ -1,4 +1,10 @@
 .qrBlock {
   display: flex;
   flex-direction: column;
+  align-self: center;
+}
+
+.canvas {
+  width: 1;
+  height: 1;
 }

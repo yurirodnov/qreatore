@@ -1,4 +1,8 @@
-.userInput {
-  padding: 10px;
+.userInputForm {
   width: 50%;
+}
+
+.userInput {
+  width: 100%;
+  padding: 10px;
 }
