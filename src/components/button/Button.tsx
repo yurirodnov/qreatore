@@ -8,7 +8,11 @@ interface ButtonProps {
 
 export const Button = ({ title, disabled, onClick }: ButtonProps) => {
   return (
-    <button onClick={onClick} disabled={disabled} className={styles.generateButton}>
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={`${styles.button} ${disabled ? styles.disabled : styles.enabled}`}
+    >
       {title}
     </button>
   );

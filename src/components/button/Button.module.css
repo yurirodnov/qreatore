@@ -1,15 +1,15 @@
-.generateButton {
+.button {
   padding: 10px;
-  background-color: blueviolet;
+
   color: aliceblue;
   border: none;
   border-radius: 10px;
 }
 
-.generateButton.disabled {
-  padding: 10px;
+.enabled {
   background-color: blueviolet;
-  color: aliceblue;
-  border: none;
-  border-radius: 5px;
+}
+
+.disabled {
+  background-color: rgb(107, 107, 107);
 }

@@ -12,7 +12,7 @@ export const InfoForm = () => {
           id="user-input"
           value={userInput}
           type="text"
-          placeholder="Your URL"
+          placeholder="Paste here your URL"
           className={styles.userInput}
           onChange={handleUserInput}
         />
