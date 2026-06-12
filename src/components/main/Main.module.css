@@ -6,6 +6,7 @@
 }
 
 .wrapper {
+  margin: 50px;
   width: 680px;
   height: 510px;
   display: flex;
@@ -14,5 +15,5 @@
   align-items: center;
   gap: 15px;
   border-radius: 10px;
-  background-color: var(--wrapper-bg-color);
+  background-color: var(--primary);
 }

@@ -16,7 +16,7 @@ export const InfoForm = () => {
           className={styles.userInput}
           onChange={handleUserInput}
         />
-        <img src={trashbin} className={styles.trashbinPic} onClick={clearUserInput} />
+        {userInput !== "" ? <img src={trashbin} className={styles.trashbinPic} onClick={clearUserInput} /> : null}
       </div>
     </form>
   );

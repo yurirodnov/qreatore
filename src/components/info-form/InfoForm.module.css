@@ -10,12 +10,17 @@
 
 .userInput {
   width: 100%;
-  background-color: var(--bg-color);
+  background-color: var(--primary-dark);
   border: none;
-  color: var(--text-color);
+  color: var(--text-primary-light);
   border-radius: 10px;
   padding: 10px;
   margin-right: 10px;
+  outline: none;
+}
+
+.userInput::placeholder {
+  color: var(--text-primary-light);
 }
 
 .trashbinPic {

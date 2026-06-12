@@ -1,13 +1,12 @@
 .button {
   padding: 15px;
-
   border: none;
   border-radius: 10px;
   font-size: 1.1em;
 }
 
 .enabled {
-  background-color: blueviolet;
+  background-color: var(--accent);
   color: aliceblue;
 }
 
@@ -24,4 +23,8 @@
 .disabled {
   background-color: rgb(107, 107, 107);
   color: rgb(158, 158, 158);
+}
+
+.disabled:hover {
+  cursor: not-allowed;
 }
