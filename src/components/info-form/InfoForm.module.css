@@ -17,6 +17,7 @@
   padding: 10px;
   margin-right: 10px;
   outline: none;
+  font-size: 1.2em;
 }
 
 .userInput::placeholder {
