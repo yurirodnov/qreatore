@@ -9,6 +9,11 @@
   border: 1px solid var(--text-color);
 }
 
+.buttonsBlock {
+  display: flex;
+  gap: 20px;
+}
+
 .canvas {
   width: 1px;
   height: 1px;
