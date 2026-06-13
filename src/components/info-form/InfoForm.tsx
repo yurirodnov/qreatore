@@ -1,3 +1,5 @@
+// src/components/info-form/InfoForm.tsx
+
 import { useStateContext } from "../../context/StateProvider";
 import trashbin from "./../../assets/trashbin.png";
 import styles from "./InfoForm.module.css";

@@ -8,9 +8,19 @@ import { NoQr } from "../no-qr/NoQr";
 import styles from "./Qr.module.css";
 
 export const Qr = () => {
-  const { userInput, isQrGenerated, handleQrGeneration } = useStateContext();
+  const { userInput, isQrGenerated, handleQrGeneration, handleQrReset, clearUserInput } = useStateContext();
 
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    handleQrReset();
+    if (canvasRef.current) {
+      const ctx = canvasRef.current.getContext("2d");
+      if (ctx) {
+        ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
+      }
+    }
+  }, [userInput]);
 
   const createQr = () => {
     QRCode.toCanvas(canvasRef.current, userInput, () => {
@@ -19,16 +29,21 @@ export const Qr = () => {
   };
 
   const resetQr = () => {
-    canvasRef.current = null;
-    canvasRef.current;
-    console.log("canvas ref", canvasRef.current);
+    clearUserInput();
   };
 
   return (
     <>
       <div className={styles.qrBlock}>
         {!isQrGenerated ? <NoQr /> : null}
-        <canvas ref={canvasRef} width={1} height={1} className={styles.canvas}></canvas>
+        {userInput !== "" ? (
+          <canvas
+            ref={canvasRef}
+            width={1}
+            height={1}
+            className={`${styles.canvas} ${!isQrGenerated ? styles.hidden : ""}`}
+          ></canvas>
+        ) : null}
       </div>
       <div className={styles.buttonsBlock}>
         <Button title="Generate" disabled={!userInput} onClick={createQr} buttonType="submit" />

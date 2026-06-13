@@ -2,7 +2,6 @@
 
 import React, { createContext, useState, useContext } from "react";
 import type { ReactNode } from "react";
-import type { QRCode } from "qrcode";
 
 interface StateContextType {
   userInput: string;
@@ -10,6 +9,7 @@ interface StateContextType {
   handleUserInput: (e: React.ChangeEvent<HTMLInputElement>) => void;
   clearUserInput: () => void;
   handleQrGeneration: () => void;
+  handleQrReset: () => void;
 }
 
 interface StateProviderProps {
@@ -31,6 +31,7 @@ export const StateProvider = ({ children }: StateProviderProps) => {
   const clearUserInput = () => {
     if (userInput !== "") {
       setUserInput("");
+      handleQrReset();
     }
   };
 
@@ -39,8 +40,14 @@ export const StateProvider = ({ children }: StateProviderProps) => {
     console.log("Is qr generated", isQrGenerated);
   };
 
+  const handleQrReset = () => {
+    setQrGenerated(false);
+  };
+
   return (
-    <StateContext.Provider value={{ userInput, isQrGenerated, handleUserInput, clearUserInput, handleQrGeneration }}>
+    <StateContext.Provider
+      value={{ userInput, isQrGenerated, handleUserInput, clearUserInput, handleQrGeneration, handleQrReset }}
+    >
       {children}
     </StateContext.Provider>
   );
