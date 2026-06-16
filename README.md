@@ -2,8 +2,6 @@
 
 A simple QR code generator built with **React**, **TypeScript**, and **Canvas API**.
 
-## ✨ Key Features
-
 ## 🛠️ Tech Stack
 
 - **Language & framework:** TypeScript & React 19
