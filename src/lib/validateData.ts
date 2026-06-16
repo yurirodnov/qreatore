@@ -1,3 +1,3 @@
 export const validateInput = (input: string): boolean => {
-  return true;
+  return URL.canParse(input) && input.length <= 500;
 };

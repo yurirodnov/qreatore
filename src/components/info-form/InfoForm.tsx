@@ -2,10 +2,15 @@
 
 import { useStateContext } from "../../context/StateProvider";
 import trashbin from "./../../assets/trashbin.png";
+import { validateInput } from "../../lib/validateData";
 import styles from "./InfoForm.module.css";
 
 export const InfoForm = () => {
   const { handleUserInput, clearUserInput, userInput } = useStateContext();
+
+  if (userInput !== "") {
+    validateInput(userInput);
+  }
 
   return (
     <form className={styles.userInputForm}>
