@@ -1,6 +1,6 @@
 import styles from "./Button.module.css";
 
-type buttonType = "submit" | "reset";
+type buttonType = "submit" | "reset" | "save";
 
 interface ButtonProps {
   title: string;

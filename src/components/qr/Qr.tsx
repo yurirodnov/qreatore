@@ -33,6 +33,23 @@ export const Qr = () => {
     clearUserInput();
   };
 
+  const saveQr = () => {
+    if (!canvasRef.current) return;
+
+    canvasRef.current.toBlob((blob: Blob | null) => {
+      if (!blob) return;
+
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "qrcode.png";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }, "image/png");
+  };
+
   return (
     <>
       <div className={styles.qrBlock}>
@@ -48,7 +65,12 @@ export const Qr = () => {
       </div>
       <div className={styles.buttonsBlock}>
         <Button title="Generate" disabled={!userInput || !isInputValid} onClick={createQr} buttonType="submit" />
-        {isQrGenerated ? <Button title="Reset" onClick={resetQr} buttonType="reset" /> : null}
+        {isQrGenerated ? (
+          <>
+            <Button title="Reset" onClick={resetQr} buttonType="reset" />
+            <Button title="Save QR" onClick={saveQr} buttonType="save" />
+          </>
+        ) : null}
       </div>
     </>
   );
