@@ -1,0 +1,10 @@
+.warningBlock {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 30px;
+}
+
+.warningText {
+  color: var(--text-primary-dark);
+}

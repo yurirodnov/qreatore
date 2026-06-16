@@ -8,7 +8,8 @@ import { NoQr } from "../no-qr/NoQr";
 import styles from "./Qr.module.css";
 
 export const Qr = () => {
-  const { userInput, isQrGenerated, handleQrGeneration, handleQrReset, clearUserInput } = useStateContext();
+  const { userInput, isQrGenerated, isInputValid, handleQrGeneration, handleQrReset, clearUserInput } =
+    useStateContext();
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -46,7 +47,7 @@ export const Qr = () => {
         ) : null}
       </div>
       <div className={styles.buttonsBlock}>
-        <Button title="Generate" disabled={!userInput} onClick={createQr} buttonType="submit" />
+        <Button title="Generate" disabled={!userInput || !isInputValid} onClick={createQr} buttonType="submit" />
         {isQrGenerated ? <Button title="Reset" onClick={resetQr} buttonType="reset" /> : null}
       </div>
     </>

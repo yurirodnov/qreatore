@@ -35,6 +35,7 @@ export const StateProvider = ({ children }: StateProviderProps) => {
   const clearUserInput = () => {
     if (userInput !== "") {
       setUserInput("");
+      setIsInputValid(true);
       handleQrReset();
     }
   };
