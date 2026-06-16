@@ -9,7 +9,7 @@ A simple QR code generator built with **React**, **TypeScript**, and **Canvas AP
 - **Clean UX:** No layout shifts, smooth transitions, inline validation
 - **Hand-written code:** No AI-generated logic, only this README 🤖
 - **TypeScript throughout:** Full type safety with discriminated unions for validation
-- **Smooth design:** Made with help of [Colorhut](https://colorhunt.co/)
+- **Smooth design:** Made with help of [Colorhunt](https://colorhunt.co/)
 
 ## 🛠️ Local Development
 
