@@ -53,4 +53,4 @@ Interested in the code? Wanna run it locally?
 
 ## 🎨 Design
 
-Use Colorhunt [palette](https://colorhunt.co/palette/59b292ffc94dfae7cbfa6781)
+Used that Colorhunt [palette](https://colorhunt.co/palette/59b292ffc94dfae7cbfa6781)
