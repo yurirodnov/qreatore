@@ -64,11 +64,16 @@ export const Qr = () => {
         ) : null}
       </div>
       <div className={styles.buttonsBlock}>
-        <Button title="Generate" disabled={!userInput || !isInputValid} onClick={createQr} buttonType="submit" />
+        <Button
+          title="Generate"
+          disabled={!userInput || !isInputValid || isQrGenerated}
+          onClick={createQr}
+          buttonType="submit"
+        />
         {isQrGenerated ? (
           <>
-            <Button title="Reset" onClick={resetQr} buttonType="reset" />
             <Button title="Save QR" onClick={saveQr} buttonType="save" />
+            <Button title="Reset" onClick={resetQr} buttonType="reset" />
           </>
         ) : null}
       </div>

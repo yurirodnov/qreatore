@@ -6,17 +6,41 @@
   width: 150px;
 }
 
-.enabled {
+.submit {
+  background-color: var(--secondary);
+  color: var(--text-primary-dark);
+}
+
+.reset {
   background-color: var(--accent);
   color: aliceblue;
 }
 
-.enabled:hover {
+.save {
+  background-color: var(--text-primary-dark);
+  color: aliceblue;
+}
+
+.submit:hover,
+.reset:hover,
+.save:hover {
   cursor: pointer;
 }
 
-.enabled:active {
-  background-color: #ee6472;
+.submit:active {
+  background-color: #daab3d;
+  position: relative;
+  top: 1px;
+}
+
+.reset:active {
+  background-color: #e05f6c;
+  position: relative;
+  top: 1px;
+}
+
+.save:active {
+  background-color: #242c3a;
   position: relative;
   top: 1px;
 }

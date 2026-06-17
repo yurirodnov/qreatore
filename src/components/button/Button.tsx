@@ -14,7 +14,7 @@ export const Button = ({ title, disabled, buttonType, onClick }: ButtonProps) =>
     <button
       onClick={onClick}
       disabled={disabled}
-      className={`${styles.button} ${styles.buttonType} ${disabled ? styles.disabled : styles.enabled}`}
+      className={`${styles.button} ${disabled ? styles.disabled : styles[buttonType]}`}
     >
       {title}
     </button>
