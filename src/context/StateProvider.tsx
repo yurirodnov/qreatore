@@ -28,7 +28,7 @@ export const StateProvider = ({ children }: StateProviderProps) => {
   const handleUserInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.currentTarget.value;
     setUserInput(value);
-    setIsInputValid(value === "" || validateInput(value));
+    setIsInputValid(value === "" || validateInput(value).validation);
     console.log("User input:", userInput);
   };
 

@@ -16,7 +16,7 @@ export const validateInput = (input: string): ValidationResult => {
   }
 
   const url = URL.parse(input);
-  if (url?.protocol !== "http" && url?.protocol !== "https") {
+  if (url?.protocol !== "http:" && url?.protocol !== "https:") {
     return { validation: false, reason: "wrong_protocol" };
   }
 
