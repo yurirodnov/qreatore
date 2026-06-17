@@ -2,6 +2,8 @@
 
 A simple QR code generator built with **React**, **TypeScript**, and **Canvas API**.
 
+![Creatore UX](public/cover.png)
+
 ## 🛠️ Tech Stack
 
 - **Language & framework:** TypeScript & React 19
