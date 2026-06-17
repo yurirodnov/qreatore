@@ -17,6 +17,7 @@
 .canvas {
   width: 1px;
   height: 1px;
+  box-shadow: 0px 0px 15px 0px var(--primary-dark);
 }
 
 .hidden {
